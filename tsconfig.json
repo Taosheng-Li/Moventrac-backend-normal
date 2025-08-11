@@ -1,0 +1,35 @@
+// File: moventrac/backend/services/api-service/tsconfig.json
+{
+  "compilerOptions": {
+    /* Module Resolution */
+    "module": "CommonJS", // The most important setting: tells TS to output code that Node.js understands by default (require/module.exports).
+    "esModuleInterop": true, // This enables compatibility between CommonJS and ES Modules. Crucial for libraries like Express.
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "./src/types",
+      "./node_modules/@types"
+    ],
+
+    /* Type Checking */
+    "strict": true, // Enables all strict type-checking options.
+    "noImplicitAny": true,
+
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": true,
+
+    /* Emit */
+    "outDir": "./dist", // Specifies where to output the compiled JavaScript.
+    "declaration": true,
+
+    /* Language and Environment */
+    "target": "ES2020", // Compile to a modern version of JavaScript.
+    "lib": ["ES2020"],
+
+    /* Other */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"], // Tells TypeScript to only look at files inside the 'src' folder.
+  "exclude": ["node_modules"]
+}
